@@ -1,0 +1,23 @@
+@(items: List[java.io.File])
+
+<h1>List Files uploaded @items.size</h1>
+<ul>
+    @items.map { item =>
+    <li>
+        <p>Files : <a href=@routes.Assets.versioned("uploaded_files/")@item.getName()>@item.getName()</a>
+
+    </li>
+
+    }
+</ul>
+
+@helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+
+<input type="file" name="picture">
+
+<p>
+    <input type="submit">
+</p>
+
+}
+

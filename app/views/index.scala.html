@@ -1,0 +1,35 @@
+@(taskForm: Form[String], item:Option[Item])(implicit messages: Messages)
+
+@import helper._
+
+@base("Dev App") {
+
+<h1>List of Links</h1>
+
+<ul>
+    Welcome to Dev Apps
+    <li>
+        <h3>List <a href='@routes.Application.items'>all items from Database: </a></h3>
+    </li>
+    <li>
+        <h3>List of <a  href='@routes.Application.uploadForm'> uploaded files </a> </h3>
+    </li>
+</ul>
+
+<p>
+    <h3>Search DB </h3>
+</p>
+
+@form(routes.Application.searchTask) {
+
+@inputText(taskForm("ItemId"))
+@inputText(taskForm("Account"))
+    <input type="submit" value="Search ID">
+ }
+}
+
+@if(item.map(_.id)){
+    <p>Results fount </p>
+    <h2>Description: @item.map(_.description)</h2>
+    <img src=@routes.Assets.versioned("images/")@item.map(_.image) width="400" height="400" align="center">
+}

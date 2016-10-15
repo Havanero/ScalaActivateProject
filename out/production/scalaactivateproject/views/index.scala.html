@@ -1,0 +1,23 @@
+@(taskForm: Form[Int])(implicit messages: Messages)
+
+@import helper._
+
+@base("Dev App") {
+
+<h1>List of Links</h1>
+
+<ul>
+    Welcome to Dev Apps
+    <li>
+        <h2>List <a href='@routes.Application.items'>all items from Database: </a></h2>
+    </li>
+</ul>
+<h2>Add a new task</h2>
+
+@form(routes.Application.searchTask) {
+
+@inputText(taskForm("ItemId"))
+    <input type="submit" value="Create">
+}
+
+}

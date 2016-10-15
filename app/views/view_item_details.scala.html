@@ -1,0 +1,20 @@
+@(items: Option[Item])
+@import helper._
+
+@base("Dev App"){
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<a href='@routes.Application.items'>Back To Listing</a>
+<h1>@items.map(_.id)</h1>
+
+<body>
+
+<h2>Description: @items.map(_.description)</h2>
+<img src=@routes.Assets.versioned("images/")@items.map(_.image) width="400" height="400" align="center">
+
+</body>
+</html>
+}

@@ -1,0 +1,21 @@
+@(items: List[Item])
+
+@import helper._
+
+@base("Dev App") {
+
+<h1>@items.size items(s)</h1>
+
+<ul>
+    @items.map { item =>
+    <li>
+        <p>Title: @item.title</p>
+        <a href='@routes.Application.view_item(item.id)'>Record ID: @item.id</a>
+        <h2>Description: @item.description</h2>
+        <img src=@routes.Assets.versioned("images/")@item.image width="270" height="160">
+    </li>
+
+    }
+</ul>
+
+}
