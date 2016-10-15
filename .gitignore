@@ -8,4 +8,4 @@ target
 /RUNNING_PID
 resources
 scalaactivateproject.iml
-
+conf/application.conf
