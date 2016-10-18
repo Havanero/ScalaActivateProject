@@ -4,7 +4,7 @@ build:
     - GO15VENDOREXPERIMENT=1
   commands:
     - sbt compile
-    - abt test
+
   notify:
     email:
       recipients:
