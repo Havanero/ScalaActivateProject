@@ -1,4 +1,4 @@
-publish:
-  docker:
-    email: caleb.carvalho@gmail.com
-    repo: drone/drone
+#publish:
+#  docker:
+#    email: caleb.carvalho@gmail.com
+#    repo: drone/drone
