@@ -1,0 +1,10 @@
+build:
+  image: drone/golang:1.5
+  environment:
+    - GO15VENDOREXPERIMENT=1
+  commands:
+    - sbt compile
+  notify:
+    email:
+      recipients:
+        - caleb.carvalho@gmail.com
