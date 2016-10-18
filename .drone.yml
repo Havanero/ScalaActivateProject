@@ -1,0 +1,6 @@
+publish:
+  docker:
+    username: drone
+    password: ....
+    email: caleb.carvalho@gmail.com
+    repo: drone/drone
