@@ -1,7 +1,6 @@
 build:
-#  image: drone/golang:1.5
-  environment:
-    - GO15VENDOREXPERIMENT=1
+  image: play-scala/1.0-SNAPSHOT
+
   commands:
     - sbt ++2.11.8 compile
 
