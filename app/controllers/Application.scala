@@ -39,28 +39,27 @@ class Application extends Controller {
     taskForm.bindFromRequest.fold(
       errors => BadRequest(views.html.index(taskForm, Item.item_id(0))),
       ItemId => {
-//        Item.search(ItemId)
+        //        Item.search(ItemId)
         print("searching ----" + ItemId)
         Ok(views.html.index(taskForm, Item.item_id(ItemId.toInt)))
-//        Ok("Hello")
- //       Redirect(routes.Application.results(ItemId))
-//        Redirect(routes.Application.submit)
+        //        Ok("Hello")
+        //       Redirect(routes.Application.results(ItemId))
+        //        Redirect(routes.Application.submit)
       }
     )
   }
 
   val taskForm = Form(
-      "ItemId" ->nonEmptyText
+    "ItemId" -> nonEmptyText
   )
 
   def submit = Action { implicit request =>
 
       var ItemId = taskForm.bindFromRequest.get
-      //     Ok("Hi added number %d".format(ItemId))
-     if(ItemId.isEmpty){
-       ItemId="0"
-     }
-      Ok(views.html.index(taskForm, Item.item_id(ItemId.toInt)))
+      if (ItemId.isEmpty) {
+        ItemId = "0"
+      }
+    Ok(views.html.index(taskForm, Item.item_id(ItemId.toInt)))
 
 
   }
