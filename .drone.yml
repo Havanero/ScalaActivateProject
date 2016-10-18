@@ -1,6 +1,7 @@
-image: ScalaActivateProject
+build:
+  image: ScalaActivateProject
 
-  script:
+  commands:
     - sbt ++2.11.8 compile
 
   notify:
