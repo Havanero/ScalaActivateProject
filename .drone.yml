@@ -2,7 +2,8 @@ build:
   image: play-scala:1.0-SNAPSHOT
 
   commands:
-    - "sbt docker:publishLocal"
+    - "./build.sh publish"
+    - "sbt -Ddocker:publishLocal"
     - "sbt ++2.11.8 compile"
 
   notify:
