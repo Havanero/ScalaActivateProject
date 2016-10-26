@@ -40,7 +40,7 @@ libraryDependencies += "net.sourceforge.javacsv" % "javacsv" % "2.0"
 //dockerExposedPorts in Docker := Seq(9000, 9443)
 
 lazy val dockerSettings = Seq(
-  // things the docker file generation depends on are listed here
+  //things the docker file generation depends on are listed here
   dockerfile in docker := {
     new sbtdocker.mutable.Dockerfile {
       copy(baseDirectory(_ / "config" / "dev.conf").value, file("app/dev.conf"))
