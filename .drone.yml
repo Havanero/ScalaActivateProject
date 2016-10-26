@@ -1,6 +1,6 @@
 build:
   image: play-scala:1.0-SNAPSHOT
-  image: havanero/sbt-docker:tagname:latest
+  image: havanero/sbt-docker:latest
 
   commands:
     - ./entryPoint.sh sbt compile
