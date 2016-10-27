@@ -1,9 +1,12 @@
+cache:
+  mount:
+    - /drone/.ivy
 Build:
 #  image: play-scala:1.0-SNAPSHOT
-#  image: havanero/sbt-docker:latest
+   image: havanero/sbt-docker:latest
 
   commands:
-    - ./entryPoint.sh sbt compile
+    - ./entryPoint.sh clean test assembly -Dsbt.ivy.home=/drone/.ivy
 
   notify:
     email:
