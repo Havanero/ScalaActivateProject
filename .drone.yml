@@ -1,4 +1,4 @@
-Build:
+build:
   image: play-scala:1.0-SNAPSHOT
   image: havanero/sbt-docker:latest
 
