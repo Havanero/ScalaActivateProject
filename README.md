@@ -2,7 +2,7 @@ This is your new Play application
 =================================
 
 
-Drone Status : [![Build Status](http://57b5f2fe.ngrok.io/api/badges/Havanero/ScalaActivateProject/status.svg)](http://57b5f2fe.ngrok.io/Havanero/ScalaActivateProject)
+Drone Status : [![Build Status](http://621201c1.ngrok.io/api/badges/Havanero/ScalaActivateProject/status.svg)](http://621201c1.ngrok.io/Havanero/ScalaActivateProject)
 
 
 
