@@ -1,3 +1,7 @@
+cache:
+  mount:
+   - /drone/.ivy
+
 Build:
   #image: play-scala:1.0-SNAPSHOT
 
