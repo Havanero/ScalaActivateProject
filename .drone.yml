@@ -1,5 +1,5 @@
-  Build:
-    image: havanero/sbt-docker:latest
+Build:
+  image: havanero/sbt-docker:latest
 
   commands:
     - ./entryPoint.sh clean test assembly -Dsbt.ivy.home=.ivy
