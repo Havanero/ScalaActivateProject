@@ -3,9 +3,8 @@
 #   - .ivy
 
 Build:
-  #image: play-scala:1.0-SNAPSHOT
-
   image: havanero/sbt-docker:latest
+  #image: play-scala:1.0-SNAPSHOT
 
   commands:
     - ./entryPoint.sh clean test assembly -Dsbt.ivy.home=.ivy
