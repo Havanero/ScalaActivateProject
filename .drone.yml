@@ -6,7 +6,7 @@ compose:
       - POSTGRES_PASSWORD=testing
 
   commands:
-    - sh ls
+    - sh build_script.sh
 
   notify:
     email:
