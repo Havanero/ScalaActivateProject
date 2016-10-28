@@ -1,4 +1,3 @@
-pull:
   image: havanero/sbt-docker:latest
 
   commands:
