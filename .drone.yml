@@ -1,7 +1,9 @@
+build:
   image: havanero/sbt-docker:latest
+  pull: true
 
-  script:
-    - ./.drone/build.sh
+  commands:
+    - sbt test
 
   notify:
     email:
