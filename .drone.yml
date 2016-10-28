@@ -1,9 +1,8 @@
 build:
   image: havanero/sbt-docker:latest
-  pull: true
 
   commands:
-    - sbt test
+    - sbt test -Dconfig.resource=dev.conf
 
   notify:
     email:
