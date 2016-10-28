@@ -5,8 +5,11 @@ compose:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=testing
 
+  build:
+    image: hseeberger/scala-sbt
+
   commands:
-    - "./build_script.sh"
+    - sbt clean test
 
   notify:
     email:
