@@ -1,7 +1,7 @@
 image: havanero/sbt-docker:latest
 
-script:
-  - ./.drone/build.sh
+  commands:
+    - ./.drone/build.sh
 
   notify:
     email:
