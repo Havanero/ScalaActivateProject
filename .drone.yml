@@ -1,4 +1,5 @@
-image: havanero/sbt-docker:latest
+pull:
+  image: havanero/sbt-docker:latest
 
   commands:
     - ./.drone/build.sh
