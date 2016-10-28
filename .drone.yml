@@ -5,8 +5,8 @@ compose:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=testing
 
-  commands:
-    - docker run -it --rm hseeberger/scala-sbt
+commands:
+  - docker run -it --rm hseeberger/scala-sbt
 
   notify:
     email:
