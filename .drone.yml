@@ -6,7 +6,7 @@ compose:
       - POSTGRES_PASSWORD=testing
 
   commands:
-    - sh docker run play-scala:1.0-SNAPSHOT -Dconfig.resource=dev.conf
+    - sh "docker run play-scala:1.0-SNAPSHOT -Dconfig.resource=dev.conf"
 
   notify:
     email:
