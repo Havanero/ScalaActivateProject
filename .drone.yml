@@ -1,4 +1,4 @@
 build:
   image: hseeberger/scala-sbt
   script:
-    - echo hello world
+    - sbt compile
