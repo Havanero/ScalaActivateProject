@@ -4,10 +4,13 @@ cache:
     - /drone/.ivy2
 
 build:
-  image: havanero/sbt-docker
+  image: havanero/sbt-docker:latest
 
   commands:
     - echo hello world
     - sbt compile
     - sbt docker:publishLocal
     - ls
+
+release:
+  image: havanero/sbt-docker:latest
