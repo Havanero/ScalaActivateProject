@@ -1,4 +1,3 @@
-build:
-  image: dockerfile/nginx
+image: dockerfile/nginx
     script:
-      - sh echo hello world
+        - sh echo hello world
