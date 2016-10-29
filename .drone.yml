@@ -1,10 +1,12 @@
 cache:
   mount:
-    - .git
-    - .ivy2
+    - /drone/.git
+    - /drone/.ivy2
 
 build:
   image: hseeberger/scala-sbt
+  pull: true
+
   commands:
     - echo hello world
     - sbt docker:publishLocal
