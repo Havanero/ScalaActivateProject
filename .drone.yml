@@ -1,12 +1,8 @@
-compose:
-  database:
-    image: postgres
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=testing
+build:
+  image: havanero/sbt-docker:latest
 
   commands:
-    - docker run -it --rm hseeberger/scala-sbt
+    - sbt test -Dconfig.resource=dev.conf
 
   notify:
     email:
