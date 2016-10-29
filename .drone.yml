@@ -2,3 +2,4 @@ build:
   image: postgres
   commands:
     - echo hello world
+    - ls
