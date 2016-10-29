@@ -1,6 +1,9 @@
+cache:
+  mount:
+    - .git
+
 build:
-  image: postgres
+  image: hseeberger/scala-sbt
   commands:
     - echo hello world
     - sbt compile
-    - ls
