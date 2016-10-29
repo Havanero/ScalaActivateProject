@@ -1,3 +1,4 @@
 build:
+  image: postgres
   commands:
-    - sbt test
+    - echo hello world
