@@ -1,3 +1,4 @@
-image: dockerfile/nginx
-script:
-  - sh echo hello world
+build:
+
+  script:
+    - sh echo hello world
