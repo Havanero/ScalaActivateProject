@@ -4,8 +4,8 @@ cache:
     - .ivy2
 
 build:
-  image: postgres
+  image: hseeberger/scala-sbt
   commands:
     - echo hello world
-    - docker run -ti --rm hseeberger/scala-sbt
-    - sbt help
+    - sbt docker:publishLocal
+    - ls
