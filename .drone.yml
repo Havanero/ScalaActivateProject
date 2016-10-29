@@ -8,5 +8,6 @@ build:
 
   commands:
     - echo hello world
+    - sbt compile
     - sbt docker:publishLocal
     - ls
