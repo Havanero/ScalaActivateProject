@@ -1,4 +1,4 @@
 build:
-  image: dockerfile/nginx
+  image: hseeberger/scala-sbt
   script:
     - echo hello world
