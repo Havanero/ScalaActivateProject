@@ -1,9 +1,11 @@
 cache:
   mount:
     - .git
+    - .ivy2
 
 build:
-  image: hseeberger/scala-sbt
+  image: postgres
   commands:
     - echo hello world
-    - sbt compile
+    - docker run -ti --rm hseeberger/scala-sbt
+    - sbt help
