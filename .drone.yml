@@ -1,4 +1,3 @@
 build:
-  image: hseeberger/scala-sbt:latest
   commands:
-    - sbt compile
+    - sbt test
