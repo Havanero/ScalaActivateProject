@@ -1,7 +1,7 @@
-build:
+composone:
   image: havanero/sbt-docker:latest
 
-  commands:
+  script:
     - sbt test -Dconfig.resource=dev.conf
 
   notify:

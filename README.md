@@ -1,8 +1,8 @@
-This is your new Play application
-=================================
+Testing Scala SBT - Cucumber
+============================
 
 
-Drone Status : [![Build Status](http://621201c1.ngrok.io/api/badges/Havanero/ScalaActivateProject/status.svg)](http://621201c1.ngrok.io/Havanero/ScalaActivateProject)
+Drone Status : [![Build Status](http://8a0a969e.ngrok.io/api/badges/Havanero/ScalaActivateProject/status.svg)](http://8a0a969e.ngrok.io/Havanero/ScalaActivateProject)
 
 
 
