@@ -1,10 +1,10 @@
 cache:
   mount:
-    - /drone/.git
-    - /drone/.ivy2
+    - .git
+    - .ivy2
 
 build:
-  image: havanero/sbt-docker:latest
+  image: hseeberger/scala-sbt
 
   commands:
     - echo hello world
@@ -12,5 +12,7 @@ build:
     - sbt docker:publishLocal
     - ls
 
-release:
-  image: havanero/sbt-docker:latest
+cache:
+  mount:
+    - .git
+    - .ivy2
