@@ -1,8 +1,8 @@
-composone:
-  image: havanero/sbt-docker:latest
+compose:
+  image: hseeberger/scala-sbt:latest
 
   script:
-    - sbt test -Dconfig.resource=dev.conf
+    - echo hello world
 
   notify:
     email:
