@@ -1,4 +1,4 @@
 build:
-
-  script:
-    - sh echo hello world
+  image: dockerfile/nginx
+    script:
+      - sh echo hello world
