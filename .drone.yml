@@ -1,7 +1,7 @@
 cache:
   mount:
     - .git
-    - .ivy2
+    - $HOME/.ivy2
 
 build:
   image: hseeberger/scala-sbt:latest
@@ -10,7 +10,6 @@ build:
     - mkdir -p $HOME/.ivy2
     - echo hello world
     - sbt compile
-    - sbt docker:publishLocal
     - ls
 
 cache:
