@@ -1,4 +1,4 @@
 build:
-  image: hseeberger/scala-sbt
-  script:
+  image: hseeberger/scala-sbt:latest
+  commands:
     - sbt compile
