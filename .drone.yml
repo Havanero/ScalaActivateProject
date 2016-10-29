@@ -4,8 +4,7 @@ cache:
     - /drone/.ivy2
 
 build:
-  image: hseeberger/scala-sbt
-  pull: true
+  image: havanero/sbt-docker
 
   commands:
     - echo hello world
