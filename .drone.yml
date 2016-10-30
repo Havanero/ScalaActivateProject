@@ -9,7 +9,6 @@ build:
   commands:
     - date
     - sbt test -Dsbt.ivy.home=/drone/.ivy2
-    - sbt compile
     - ls /drone/.git
     - ls /drone/.ivy2
     - date
