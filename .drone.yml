@@ -7,9 +7,6 @@ build:
   image: hseeberger/scala-sbt
 
   commands:
-    - date
     - sbt compile -Dsbt.ivy.home=/drone/.ivy2
-    - ls /drone/
-    - ls /drone/.ivy2
-    - date
+    - ls target
 
