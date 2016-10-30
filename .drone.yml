@@ -1,7 +1,7 @@
 cache:
   mount:
-    - root/.git
-    - root/.ivy2
+    - .git
+    - .ivy2
 
 build:
   image: hseeberger/scala-sbt:latest
