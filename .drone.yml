@@ -7,12 +7,7 @@ build:
   image: hseeberger/scala-sbt:latest
 
   commands:
-    - mkdir -p .ivy2
     - echo hello world
     - sbt compile
     - ls
 
-cache:
-  mount:
-    - .git
-    - .ivy2
