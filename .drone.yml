@@ -7,6 +7,5 @@ build:
   image: hseeberger/scala-sbt
 
   commands:
-    - sbt compile -Dsbt.ivy.home=/drone/.ivy2
-    - ls target
+    - sbt test -Dsbt.ivy.home=/drone/.ivy2 -Dconfig.resources=dev.conf
 
