@@ -1,13 +1,13 @@
 cache:
   mount:
-    - .git
-    - $HOME/.ivy2
+    - root/.git
+    - root/.ivy2
 
 build:
   image: hseeberger/scala-sbt:latest
 
   commands:
-    - mkdir -p $HOME/.ivy2
+    - cp -a root/.ivy2 $HOME/.ivy2
     - echo hello world
     - sbt compile
     - ls
