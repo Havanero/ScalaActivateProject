@@ -9,4 +9,5 @@ build:
   commands:
     - sbt packageBin -Dsbt.ivy.home=/drone/.ivy2
     - sbt run -Dsbt.ivy.home=/drone/.ivy2 -Dconfig.resource=dev.conf
+    - sbt test -Dsbt.ivy.home=/drone/.ivy2
 
