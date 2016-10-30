@@ -1,16 +1,16 @@
 cache:
   mount:
-    - .git
-    - .ivy2
+    - /drone/.git
+    - /drone/.ivy2
 
 build:
   image: hseeberger/scala-sbt:latest
 
   commands:
     - date
-    - mkdir -p .ivy2
-    - sbt "set offline := true" compile
-    - ls .git
-    - ls .ivy2
+    - sbt test -Dsbt.ivy.home=/drone/.ivy2
+    - sbt compile
+    - ls /drone/.git
+    - ls /drone/.ivy2
     - date
 
