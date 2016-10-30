@@ -1,15 +1,15 @@
 cache:
   mount:
     - .git
-    - /root/.ivy2
+    - .ivy2
 
 build:
   image: hseeberger/scala-sbt:latest
 
   commands:
     - echo hello world
-    - sbt -Dsbt.ivy.home=/root/.ivy2
+    - sbt -Dsbt.ivy.home=.ivy2
     - sbt compile
     - ls  .git
-    - ls /root/.ivy2
+    - ls  .ivy2
 
