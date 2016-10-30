@@ -8,7 +8,8 @@ build:
 
   commands:
     - echo hello world
+    - mkdir -p .ivy2
     - sbt compile
-    - ls  .git
-    - ls  .ivy2/cache
+    - ls .git
+    - ls .ivy2
 
