@@ -1,6 +1,6 @@
 cache:
   mount:
-    - /drone/.git
+    - .git
     - /drone/.ivy2
 
 build:
