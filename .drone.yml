@@ -8,7 +8,6 @@ build:
 
   commands:
     - echo hello world
-    - sbt -Dsbt.ivy.home=.ivy2
     - sbt compile
     - ls  .git
     - ls  .ivy2
