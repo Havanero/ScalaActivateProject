@@ -7,9 +7,10 @@ build:
   image: hseeberger/scala-sbt:latest
 
   commands:
-    - echo hello world
+    - date
     - mkdir -p .ivy2
-    - sbt compile
+    - sbt "set offline := true" compile
     - ls .git
     - ls .ivy2
+    - date
 
