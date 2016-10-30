@@ -10,5 +10,5 @@ build:
     - echo hello world
     - sbt compile
     - ls  .git
-    - ls  .ivy2
+    - ls  .ivy2/cache
 
