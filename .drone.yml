@@ -8,7 +8,9 @@ build:
 
   commands:
     - echo hello world
+    - mkdir -p /root/.ivy2
+    - sbt -Dsbt.ivy.home=/root/.ivy2
     - sbt compile
     - ls  .git
-    - ls .ivy2
+    - ls /root/.ivy2
 
