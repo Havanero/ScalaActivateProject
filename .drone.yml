@@ -9,5 +9,6 @@ build:
   commands:
     - echo hello world
     - sbt compile
-    - ls
+    - ls  .git
+    - ls .ivy2
 
