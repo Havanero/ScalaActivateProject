@@ -1,4 +1,4 @@
-package bb.steps
+package bdd.steps
 
 import cucumber.api.scala.{EN, ScalaDsl}
 import org.openqa.selenium.chrome.ChromeDriver

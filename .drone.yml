@@ -4,9 +4,10 @@ cache:
     - /drone/.ivy2
 
 build:
-  image: hseeberger/scala-sbt
+  test:
+    image: hseeberger/scala-sbt
 
-  commands:
-    - sbt packageBin -Dsbt.ivy.home=/drone/.ivy2
-    - sbt run -Dsbt.ivy.home=/drone/.ivy2 -Dconfig.resource=dev.conf
+    commands:
+      - sbt packageBin -Dsbt.ivy.home=/drone/.ivy2
+      - sbt run -Dsbt.ivy.home=/drone/.ivy2 -Dconfig.resource=dev.conf
 

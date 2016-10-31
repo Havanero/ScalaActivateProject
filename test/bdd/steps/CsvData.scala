@@ -1,4 +1,4 @@
-package bb.steps
+package bdd.steps
 
 import com.csvreader.CsvReader
 

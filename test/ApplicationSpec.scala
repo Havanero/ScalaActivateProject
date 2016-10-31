@@ -2,7 +2,7 @@ import java.io._
 import java.util.zip.{ZipEntry, ZipInputStream}
 
 import au.com.bytecode.opencsv.CSVWriter
-import bb.steps.{CsvData, Validate}
+import bdd.steps.CsvData
 import com.csvreader.CsvReader
 import org.junit.runner._
 import org.specs2.mutable._
@@ -11,9 +11,7 @@ import play.api.test.Helpers._
 import play.api.test._
 
 import scala.collection.JavaConversions._
-import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
-import scala.io.Source
 
 /**
   * Add your spec here.
@@ -38,12 +36,12 @@ class ApplicationSpec extends Specification {
       contentAsString(home) must contain("Welcome to Dev Apps")
     }
 
-//    def getRowData(x: mutable.LinkedHashMap[String, String]): (ListBuffer[String]) = {
-//      val dataList = ListBuffer.empty[String]
-//      for (k <- x.keys)
-//        dataList += x.get(k).getOrElse().asInstanceOf[String]
-//      dataList
-//    }
+    //    def getRowData(x: mutable.LinkedHashMap[String, String]): (ListBuffer[String]) = {
+    //      val dataList = ListBuffer.empty[String]
+    //      for (k <- x.keys)
+    //        dataList += x.get(k).getOrElse().asInstanceOf[String]
+    //      dataList
+    //    }
     def getFileWithExtension(fileExt: String): String = {
       val fileInZip = getZippedListings("/home/cubanguy/IdeaProjects/ScalaActivateProject/resources/NewBG.zip").
         find(x => x.contains(fileExt)).getOrElse().asInstanceOf[String]
@@ -69,12 +67,12 @@ class ApplicationSpec extends Specification {
         }
       }
 
-//      val url = "http://localhost:9000/assets/uploaded_files/report_file_to_mimic_home_office_csv.csv"
-//      val csvFile = Source.fromURL(url).bufferedReader()
+      //      val url = "http://localhost:9000/assets/uploaded_files/report_file_to_mimic_home_office_csv.csv"
+      //      val csvFile = Source.fromURL(url).bufferedReader()
 
-      CsvData.pFilePath="/home/cubanguy/IdeaProjects/ScalaActivateProject/resources/NewBG.zip"
-      if(CsvData.isFilesUnzipped)
-        CsvData.pFilePath="/home/cubanguy/IdeaProjects/ScalaActivateProject/resources/report_file_to_mimic_home_office_csv.csv"
+      CsvData.pFilePath = "/home/cubanguy/IdeaProjects/ScalaActivateProject/resources/NewBG.zip"
+      if (CsvData.isFilesUnzipped)
+        CsvData.pFilePath = "/home/cubanguy/IdeaProjects/ScalaActivateProject/resources/report_file_to_mimic_home_office_csv.csv"
       val csvReader = new CsvReader(CsvData.getFilePath)
       CsvData.handlerReader = csvReader
 
@@ -88,7 +86,7 @@ class ApplicationSpec extends Specification {
       bodyArray += "Validation"
       CsvData.setWriteCsvSchemaHeader(bodyArray.toArray)
 
-//      val validation:Validate = new Validate(CsvData)
+      //      val validation:Validate = new Validate(CsvData)
 
       for (x <- CsvData.getCsvRecordSchema.values) {
         val (dataList: ListBuffer[String]) = CsvData.getRowData(x)

@@ -47,3 +47,4 @@ lazy val dockerSettings = Seq(
     }
   }
 )
+javaOptions in Test += "-Dconfig.file=conf/dev.conf"

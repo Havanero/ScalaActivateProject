@@ -1,4 +1,4 @@
-package bb.steps
+package bdd.steps
 
 import java.io.{File, FileInputStream, FileOutputStream}
 import java.util.zip.{ZipEntry, ZipInputStream}
