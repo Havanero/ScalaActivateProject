@@ -3,7 +3,7 @@ package srrs.test.csv
 import java.io.FileWriter
 
 import au.com.bytecode.opencsv.CSVWriter
-import bdd.steps.ZipFilesUtils
+import bdd.features.definition.ZipFilesUtils
 import com.csvreader.CsvReader
 
 /**

@@ -2,7 +2,7 @@ import java.io._
 import java.util.zip.{ZipEntry, ZipInputStream}
 
 import au.com.bytecode.opencsv.CSVWriter
-import bdd.steps.CsvData
+import bdd.features.definition.CsvData
 import com.csvreader.CsvReader
 import org.junit.runner._
 import org.specs2.mutable._
