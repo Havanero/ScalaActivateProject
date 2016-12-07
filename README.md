@@ -1,4 +1,4 @@
-Testing Scala SBT - Cucumber
+Testing Scala SBT - Cucumber1
 ============================
 
 

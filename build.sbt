@@ -26,9 +26,13 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
         libraryDependencies += "info.cukes" % "cucumber-picocontainer" % "1.1.8" % "test",
         libraryDependencies += "org.seleniumhq.selenium" % "selenium-java" % "2.42.2" % "test",
         libraryDependencies += "org.scalatestplus" % "play_2.11" % "1.4.0" % "test",
-        libraryDependencies += "junit" % "junit" % "4.11" % "test",
-        libraryDependencies += "net.sf.opencsv" % "opencsv" % "2.0"
-      // other settings here
+        libraryDependencies += "junit" % "junit" % "4.12" % "test",
+        libraryDependencies += "net.sf.opencsv" % "opencsv" % "2.0",
+        // https://mvnrepository.com/artifact/org.activiti/activiti-engine
+        libraryDependencies += "org.activiti" % "activiti-engine" % "5.14",
+        libraryDependencies += "net.sourceforge.javacsv" % "javacsv" % "2.0"
+
+        // other settings here
   )
 
 
@@ -46,7 +50,7 @@ libraryDependencies ++= Seq(
   "info.cukes" % "cucumber-picocontainer" % "1.1.8" % "test",
   "org.seleniumhq.selenium" % "selenium-java" % "2.42.2" % "test",
   "org.scalatestplus" % "play_2.11" % "1.4.0" % "test",
-  "junit" % "junit" % "4.11" % "test",
+  "junit" % "junit" % "4.12" % "test",
   "net.sf.opencsv" % "opencsv" % "2.0"
 )
 
@@ -75,8 +79,7 @@ lazy val dockerSettings = Seq(
   }
 )
 
-javaOptions in Test += "-Dconfig.file=conf/dev.conf"
-testOptions in IntegrationTest += Tests.Setup(() => println("setup"))
-
-testOptions in IntegrationTest += Tests.Cleanup(() => println("cleanup"))
+//javaOptions in Test += Tests.Setup(() => println("Unit Test Setup"))
+testOptions in IntegrationTest += Tests.Setup(() => println("Integration Test Setup"))
+testOptions in IntegrationTest += Tests.Cleanup(() => println("Integration Test cleanup"))
 

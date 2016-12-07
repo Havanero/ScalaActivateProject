@@ -9,5 +9,6 @@ build:
 
     commands:
       - sbt compile -Dsbt.ivy.home=/drone/.ivy2
-      - sbt run -Dsbt.ivy.home=/drone/.ivy2 &
+      - sbt run -Dsbt.ivy.home=/drone/.ivy2
+      - cd ActiviBMP2.0 && mvn clean install
 
